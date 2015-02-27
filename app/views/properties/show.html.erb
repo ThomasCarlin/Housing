@@ -1,0 +1,12 @@
+<p>
+  <strong>Title:</strong>
+  <%= @property.name %>
+</p>
+ 
+<p>
+  <strong>Text:</strong>
+  <%= @property.description %>
+</p>
+
+<%= link_to 'Back', properties_path %> |
+<%= link_to 'Edit', edit_property_path(@property) %>

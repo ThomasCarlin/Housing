@@ -1,0 +1,83 @@
+<%= form_for :property, url: properties_path do |f| %>
+ 
+  <% if @property.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@property.errors.count, "error") %> prohibited
+        this property from being saved:
+      </h2>
+      <ul>
+        <% @property.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= f.label :name %><br>
+    <%= f.text_field :name %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+ 
+  <p>
+    <%= f.label :price %><br>
+    <%= f.text_field :price %>
+  </p>
+
+  <p>
+    <%= f.label :bedrooms  %><br>
+    <%= f.text_field :bedrooms %>
+  </p>
+
+  <p>
+    <%= f.label :bathrooms %><br>
+    <%= f.text_field :bathrooms %>
+  </p>
+
+  <p>
+    <%= f.label :type %><br>
+    <%= f.text_field :type %>
+  </p>
+ 
+  <p>
+    <%= f.label :landlord %><br>
+    <%= f.text_field :landlord %>
+  </p>
+
+  <p>
+    <%= f.label :parking  %><br>
+    <%= f.text_field :parking %>
+  </p>
+
+  <p>
+    <%= f.label :pet %><br>
+    <%= f.text_field :pet %>
+  </p>
+
+  <p>
+    <%= f.label :street %><br>
+    <%= f.text_field :street %>
+  </p>
+ 
+  <p>
+    <%= f.label :xcoordinate %><br>
+    <%= f.text_field :xcoordinate %>
+  </p>
+
+  <p>
+    <%= f.label :ycoordinate  %><br>
+    <%= f.text_field :ycoordinate %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', properties_path %>
